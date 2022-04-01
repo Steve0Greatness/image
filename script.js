@@ -14,6 +14,11 @@ if (search) {
     body.innerHTML = ""
     body.appendChild(image);
 } else {
+    body.innerHTML = `<div class="open-image">
+        <h1>Open Image</h1>
+        <p>Paste the URL below.</p>
+        <input type="url" id="url">
+    </div>`;
     document.getElementById("url").addEventListener("change", function() {
         let elem = this.value.split(".")
             elea = this.value.substring(8).split("/");
