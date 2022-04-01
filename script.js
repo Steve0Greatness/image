@@ -5,23 +5,13 @@ if (search) {
     // image
     let image = document.createElement("img");
     image.src = `https://assets.scratch.mit.edu/${search}`;
-    image.style.backgroundColor = "white";
-    image.style.maxWidth = "100%";
-    image.style.margin = "auto";
-    image.style.minWidth = "100px";
-    image.style.height = "auto";
+    image.id = "main-image";
 
     // title
     document.title = search + " - view";
 
     // body
     body.innerHTML = ""
-    body.style.margin = 0;
-    body.style.backgroundColor = "black";
-    body.style.display = "flex";
-    body.style.alignItems = "center";
-    body.style.justifyContent = "center";
-    body.style.height = "100vh";
     body.appendChild(image);
 } else {
     document.getElementById("url").addEventListener("change", function() {
