@@ -7,7 +7,8 @@ if (!search) {
         <p>Paste the URL below.</p>
         <input type="url" id="url">
     </div>`;
-    document.querySelector("#url").addEventListener("change", function() {
+    document.querySelector("#url").addEventListener("change", () => {
+        console.log(this)
         let elem = this.value.split(".")
             elea = this.value.substring(8).split("/");
         if (elem[0].substring(8) === "assets" && elem[1] === "scratch" && elem[2] === "mit" && elem[3].split("/")[0] === "edu") {
