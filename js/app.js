@@ -11,7 +11,6 @@ if (search) {
     document.title = search + " - view";
 
     // body
-    body.innerHTML = ""
     body.appendChild(image);
 } else {
     location.assign("/")
