@@ -1,5 +1,10 @@
 const search = location.search.substring(1),
-    body = document.body; // Gets the location.search, and then removes the first character
+    body = document.body,
+    hash = location.hash.substring(1);
+
+if (hash) {
+    location.assign(`?${hash}`)
+}
 
 if (search) {
     // image
@@ -8,7 +13,7 @@ if (search) {
     image.id = "main-image";
 
     // title
-    document.title = search + " - view";
+    document.title = `${search} - view`;
 
     // body
     body.appendChild(image);
